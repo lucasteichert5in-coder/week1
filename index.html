@@ -1,74 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My first webpage</title>
-    <link rel="stylesheet" href="./styles/second.css"/>
-    <link rel="stylesheet" href="./styles/first.css"/>
-    
- 
+    <link rel="stylesheet" href="./styles/second.css" />
+    <link rel="stylesheet" href="./styles/first.css" />
+
+
 
 </head>
-<body id="light">
 
-    <button onclick="console.log('hi');document.body.id='dark'">
-       dark mode
-    </button>
-    <button onclick="console.log('hi');document.body.id='light'">
-       
-   Light Mode 
+<body id="dark">
+    <button id="color-mode" onclick="changeColors();">
+        Light mode
+
     </button>
 
-<script>
+    <script>
+        const colorModeButton = document.querySelector('#color-mode');
+        function changeColors() {
+            if (document.body.id === "dark") {
+                console.log('turn on light');
+                document.body.id = 'light';
+                colorModeButton.textContent = 'Dark mode';
+
+            } else {
+                console.log('turn on light');
+                document.body.id = 'dark';
+                colorModeButton.textContent = 'Light mode';
+            }
+        }
+
+    </script>
+    <h1>My first webpage</h1>
+
+
+    <h2>Full-Stack Curriculum</h2>
+    <img src="./images/CA35AB21-A413-44F7-BA27-A84D34E4BBFF-dog.png" width="900">
+    <p class="piglet">Learn the skills to become a full-stack developer</p>
+
+    <h3>Introduction to HTML</h3>
+    <p>HTML represents the content and structure of a webpage</p>
+
+    <h3>Introduction to CSS</h3>
+    <p>CSS is used to style a webpage</p>
+
+    <h3>Introduction to JavaScript</h3>
+    <p class="piglet">JavaScript adds interactivity to a webpage</p>
+
+    <script>
+        let dog = {
+            name: "Rika",
+            weight: 70,
+            happy: true,
+        };
+        console.log(dog.name);
+        let family = {
+            dad: "Yuta",
+            mom: "Maki",
+            daughter: "Yuka",
+            pet: dog,
+        };
+        console.log(family);
+        family.pet.happy = true;
+        console.log(console);
+
+
+         function howAreYou() {
+        let mood = prompt("How are you feeling?")
+        if (mood === "sleepy") {
+            alert('WAKE UP');
+        } else if (mood === "dont you have a human heart") {
+            alert('HAHA' + mood + ",")
+        } else {
+            alert("Oh! You are feeling " + mood + ".")
+        }
+    }
+
+        console.log(mood);
+    </script>
+       <button id="how are you" onclick="howAreYou();">
+        how are you?
     
-</script>
-<h1>My first webpage</h1>
 
+    </button>
 
-<h2>Full-Stack Curriculum</h2>
-<img src="./images/image.png"width="900">
-<p class="piglet">Learn the skills to become a full-stack developer</p>
-
-<h3>Introduction to HTML</h3>
-<p>HTML represents the content and structure of a webpage</p>
-
-<h3>Introduction to CSS</h3>
-<p>CSS is used to style a webpage</p>
-
-<h3>Introduction to JavaScript</h3>
-<p class="piglet">JavaScript adds interactivity to a webpage</p>
-
-<script>
-let dog = {
-    name:"Rika",
-    weight: 70,
-    happy: true,
-};
-console.log(dog.name);
-let family ={
-    dad:"Yuta",
-    mom :"Maki",
-    daughter:"Yuka",
-    pet:dog,
-};
-console.log(family);
-family.pet.happy = true;
-console.log(console);
-
-let mood =prompt("How are you feeling?")
-if(mood ==="sleepy"){
-alert('WAKE UP');
-}else if (mood ==="dont you have a human heart"){
-    alert('HAHA'+ mood + ",")
-} else {
-    alert("Oh! You are feeling "+ mood+".")
-}
-
-
-console.log(mood);
-</script>
-<footer>
-    <p>3/12</p>
-    <p>Lucas</p>
-</footer>
+    <footer>
+        <p>3/12</p>
+        <p>Lucas</p>
+    </footer>
 </body>
-</html>                                                                               C VBGHF
+
+</html> C VBGHF
