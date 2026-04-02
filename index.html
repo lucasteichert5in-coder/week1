@@ -67,17 +67,34 @@
 
 
          function howAreYou() {
-        let mood = prompt("How are you feeling?")
+        let feeling = prompt("How are you feeling?");
+        respond(feeling);
+         }
+         function respond (mood) {
+
         if (mood === "sleepy") {
             alert('WAKE UP');
         } else if (mood === "dont you have a human heart") {
             alert('HAHA' + mood + ",")
         } else {
-            alert("Oh! You are feeling " + mood + ".")
+            alert("Oh! You are feeling " + mood + ".");
         }
     }
+    function addtwo (value) {
+console.log(value + 2);
+return value+2;
+    }
+    addtwo (5);
 
-        console.log(mood);
+    let result = addtwo (9);
+    console.log("result" , result);
+
+        console.log("mood", typeof mood);
+        console.log("hi");
+        if (true){
+        let insideIf = 'yep';
+
+        }
     </script>
        <button id="how are you" onclick="howAreYou();">
         how are you?
